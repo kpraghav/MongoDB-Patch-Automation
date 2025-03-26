@@ -23,6 +23,10 @@ Make sure to replace <ops-manager-url> and <your-api-key> with actual values. Le
 
 pip install requests
 
+# while running parallel executions , make sure these are executed below
+pip install requests argparse logging
+
+
 # Command to run upgrade without param
 
 python3 mongodb_upgrade.py
