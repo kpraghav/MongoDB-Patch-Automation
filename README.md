@@ -1,6 +1,25 @@
 
 # MongoDB-Patch-Automation
 
+# ✅ Required Packages
+Here are the required packages:
+
+requests → For making API calls to OpsManager. pip install requests
+
+logging → For generating logs (already included in Python).
+
+json → For handling JSON data (already included in Python).
+
+csv → For writing reports to CSV (already included in Python).
+
+argparse → For command-line argument parsing (already included in Python).
+
+os → For file operations (already included in Python).
+
+time → For monitoring and adding time delays (already included in Python).
+
+Only requests needs to be installed if it is not present.
+
 # Step by Step exeuction
 
 ✅ Step 1: Take Backup Before Upgrade
