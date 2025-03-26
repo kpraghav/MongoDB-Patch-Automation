@@ -1,3 +1,6 @@
+
+# MongoDB-Patch-Automation
+
 # what it covers 
 
 This Python script covers all your requirements:
@@ -16,41 +19,17 @@ This Python script covers all your requirements:
 
 Make sure to replace <ops-manager-url> and <your-api-key> with actual values. Let me know if you'd like further tweaks or explanations!
 
+# Check if requests is installed 
+
+pip install requests
+
+# Command to run 
+
+python3 mongodb_upgrade.py
 
 
-# MongoDB-Patch-Automation
 
 
-
-4. PUT /api/public/v1.0/groups/{groupId}/automationConfig
-
-   Request body - 
-{
-  "processes": [
-    {
-      "_id": "rs0_1",
-      "hostname": "mongodb-node1.example.com",
-      "args2_6": {
-        "net": {
-          "port": 27017
-        },
-        "replication": {
-          "replSetName": "rs0"
-        }
-      },
-      "version": "7.0.16"
-    },
-    {
-      "_id": "rs0_2",
-      "hostname": "mongodb-node2.example.com",
-      "args2_6": {
-        "net": {
-          "port": 27017
-        },
-        "replication": {
-          "replSetName": "rs0"
-        }
-      },
       "version": "7.0.16"
     }
   ],
