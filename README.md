@@ -27,11 +27,3 @@ pip install requests
 
 python3 mongodb_upgrade.py
 
-
-
-
-      "version": "7.0.16"
-    }
-  ],
-  "authSchemaVersion": 5
-}
