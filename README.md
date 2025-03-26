@@ -1,6 +1,59 @@
 
 # MongoDB-Patch-Automation
 
+# Step by Step exeuction
+
+✅ Step 1: Take Backup Before Upgrade
+Purpose: Ensure you have a backup of all configurations in case of any failures.
+
+Script: python opsmanager_backup.py
+
+# What Happens:
+
+- It takes a backup of automation configuration and cluster configuration for all group IDs.
+
+- It triggers on-demand snapshots.
+
+- Stores the backup files in the backup_data/ directory.
+
+- Logs the agent health status to agent_health.csv.
+
+✅ Step 2: Perform MongoDB Patch Upgrade
+Purpose: Upgrade MongoDB to the desired version.
+
+Script: python mongodb_upgrade.py --version <target-version>
+example - python mongodb_upgrade.py --version 7.0.16
+
+# What Happens:
+
+- Fetches all group IDs.
+
+- Checks if all agents are active.
+
+- Upgrades MongoDB to the specified version for each group.
+
+- Monitors the upgrade progress.
+
+- In case of any failure, it triggers a rollback using the rollback logic within the script.
+
+- Generates logs, and detailed upgrade reports in upgrade_summary.csv and agent_issues.csv
+
+✅ Step 3: Rollback (If Needed)
+Purpose: Revert to the previous state using the backed-up data if the upgrade fails or issues are observed.
+
+Script: python opsmanager_rollback.py
+
+# What Happens:
+
+Uses backup files from backup_data/ to restore both automation and cluster configurations.
+
+Validates if the rollback is successful for all group IDs.
+
+Tracks any rollback failures and logs them into rollback_failures.csv.
+
+Generates a summary confirming rollback success.
+
+
 # what it covers 
 
 This Python script covers all your requirements:
