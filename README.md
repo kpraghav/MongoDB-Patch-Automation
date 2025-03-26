@@ -23,7 +23,10 @@ Make sure to replace <ops-manager-url> and <your-api-key> with actual values. Le
 
 pip install requests
 
-# Command to run 
+# Command to run upgrade without param
 
 python3 mongodb_upgrade.py
 
+# Command to run upgrade with param
+
+python3 mongodb_upgrade.py --version 7.0.16
