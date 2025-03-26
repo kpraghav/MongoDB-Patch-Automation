@@ -3,6 +3,8 @@
 
 
 4. PUT /api/public/v1.0/groups/{groupId}/automationConfig
+
+   Request body - 
 {
   "processes": [
     {
